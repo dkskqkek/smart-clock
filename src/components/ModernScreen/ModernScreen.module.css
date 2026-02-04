@@ -1,0 +1,139 @@
+.screen {
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    /* Ratio to match image (Weather is thinner than Right side usually, or equal. Image looks 1:1.5) */
+    gap: 1.5vmin;
+    padding: 2vmin;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Common Card Style --- */
+.card {
+    background: #1c1c1e;
+    /* Apple-style dark gray */
+    border-radius: 3vmin;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- Left Column: Weather --- */
+.weatherCard {
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+}
+
+.weatherIcon {
+    filter: drop-shadow(0 0.5vmin 1vmin rgba(0, 0, 0, 0.5));
+}
+
+.temp {
+    font-size: 15vmin;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.condition {
+    font-size: 3.5vmin;
+    color: #8e8e93;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- Right Column: Clock & Finance --- */
+.rightCol {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5vmin;
+}
+
+/* Clock Selection */
+.clockCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* Clock in image seems to be on black or separate? Image shows seamless black bg for clock, cards for stocks? Actually image has 3 blocks: Weather(Card), Clock(Text floating), Stocks(Grid of Cards). Let's start with Clock as Text. */
+    /* Wait, looking at image: It's Weather Card (Left), Clock (Top Right Text), Finance (Bottom Right Cards). */
+}
+
+/* Refined Layout based on Image Analysis */
+/* Left: Weather Card. Right Top: Clock Text. Right Bottom: Finance Grid. */
+
+.clockArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: 16vmin;
+    font-weight: 300;
+    /* Thin modern look */
+    line-height: 1;
+    letter-spacing: -0.5vmin;
+}
+
+.date {
+    font-size: 4vmin;
+    color: #8e8e93;
+    font-weight: 400;
+    margin-top: 1vmin;
+}
+
+.financeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5vmin;
+    width: 100%;
+    height: 100%;
+}
+
+.financeItem {
+    background: #1c1c1e;
+    border-radius: 2vmin;
+    padding: 1.5vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finName {
+    font-size: 2.5vmin;
+    color: #eebb99;
+    /* Slight tint or white */
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.5vmin;
+}
+
+.finPrice {
+    font-size: 3.5vmin;
+    font-weight: 500;
+}
+
+.finChange {
+    font-size: 2vmin;
+    margin-top: 0.5vmin;
+    display: flex;
+    align-items: center;
+    gap: 0.5vmin;
+    font-weight: 500;
+}
+
+.up {
+    color: #34c759;
+}
+
+.down {
+    color: #ff3b30;
+}

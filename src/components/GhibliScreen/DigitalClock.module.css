@@ -1,0 +1,63 @@
+.clockWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* Removed individual glass background, letting it sit on the main layout */
+    position: relative;
+}
+
+.timeDisplay {
+    display: flex;
+    align-items: baseline;
+    font-family: var(--font-display), sans-serif;
+    color: #ffffff;
+    font-size: 35vmin;
+    /* Massive font as requested */
+    line-height: 0.8;
+    text-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 100px rgba(255, 255, 255, 0.1);
+    gap: 2vmin;
+}
+
+.digitGroup {
+    display: flex;
+}
+
+.digitContainer {
+    position: relative;
+    width: 20vmin;
+    height: 28vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digit {
+    position: absolute;
+}
+
+.separator {
+    position: relative;
+    top: -2vmin;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 30vmin;
+}
+
+.secondsBar {
+    width: 80%;
+    height: 0.6vmin;
+    background: rgba(255, 255, 255, 0.15);
+    margin-top: 4vmin;
+    border-radius: 1vmin;
+    overflow: hidden;
+}
+
+.secondsProgress {
+    height: 100%;
+    background: #4ade80;
+    box-shadow: 0 0 15px #4ade80;
+}

@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    /* Pill shape */
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    color: #fbbf24;
+    /* Amber 400 */
+    flex-shrink: 0;
+}
+
+.text {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

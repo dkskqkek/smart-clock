@@ -1,0 +1,173 @@
+.screen {
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 3vmin;
+    /* Responsive padding */
+    font-family: 'VT323', monospace;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    /* Push content to edges */
+}
+
+/* --- Top Bar --- */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.3vmin solid #333;
+    padding-bottom: 1vmin;
+    margin-bottom: 1vmin;
+    height: 10vh;
+    /* Fixed visual height proportion */
+}
+
+.locationInfo {
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.city {
+    font-size: 5vmin;
+    /* Responsive Font */
+    color: #ffff00;
+}
+
+.countryBox {
+    background: #4ade80;
+    color: #000;
+    padding: 0 0.8vmin;
+    font-size: 3.5vmin;
+    border-radius: 0.5vmin;
+    font-weight: bold;
+    height: 4.5vmin;
+    line-height: 4.5vmin;
+}
+
+.networkInfo {
+    font-size: 3.5vmin;
+    color: #00ffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5vmin;
+}
+
+/* --- Main Content --- */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.weatherText {
+    position: absolute;
+    top: 14vh;
+    right: 2vmin;
+    font-size: 4vmin;
+    color: #cccccc;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5vmin 1.5vmin;
+    border-radius: 1vmin;
+    backdrop-filter: blur(2px);
+}
+
+.clockRow {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    line-height: 1;
+    margin-top: -2vh;
+    /* Slight optical adjustment */
+}
+
+.time {
+    font-size: 35vmin;
+    /* HUGE clock */
+    color: #ffffff;
+    text-shadow: 0.5vmin 0.5vmin 0 #000;
+    letter-spacing: -1vmin;
+}
+
+.seconds {
+    font-size: 10vmin;
+    color: #00ffff;
+    margin-left: 1vmin;
+    font-variant-numeric: tabular-nums;
+}
+
+.dateRow {
+    font-size: 6vmin;
+    color: #00ffff;
+    margin-top: 1vmin;
+}
+
+/* --- Bottom Area --- */
+.bottomArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 25vh;
+    /* Dedicated bottom area */
+    border-top: 0.2vmin solid #222;
+    padding-top: 2vmin;
+}
+
+.statsCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5vmin;
+    flex: 1;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+    font-size: 5vmin;
+}
+
+.statValue {
+    width: 8vmin;
+    text-align: right;
+    font-size: 5vmin;
+}
+
+/* Progress Bars Responsive */
+.barContainer {
+    width: 25vmin;
+    height: 2.5vmin;
+    background: #333;
+    border-radius: 1.25vmin;
+    overflow: hidden;
+    position: relative;
+    border: 0.2vmin solid #555;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 1.25vmin;
+}
+
+.tempFill {
+    background: linear-gradient(90deg, #4ade80, #ffff00, #ff3333);
+}
+
+.humFill {
+    background: linear-gradient(90deg, #00ffff, #0088ff);
+}
+
+.weatherIconCol {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

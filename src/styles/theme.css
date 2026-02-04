@@ -1,0 +1,47 @@
+:root {
+  /* Dark Mode Palette */
+  --bg-primary: #0f172a;
+  /* Slate 900 */
+  --bg-secondary: #1e293b;
+  /* Slate 800 */
+  --bg-card: rgba(30, 41, 59, 0.7);
+  /* Glass effect base */
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  /* Slate 50 */
+  --text-secondary: #94a3b8;
+  /* Slate 400 */
+  --text-accent: #38bdf8;
+  /* Sky 400 */
+
+  /* Semantic Colors */
+  --color-up: #4ade80;
+  /* Green 400 */
+  --color-down: #f87171;
+  /* Red 400 */
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', monospace;
+  /* Fallback */
+
+  /* Spacing */
+  --spacing-container: 2rem;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+  /* Prevent scroll for always-on display */
+  /* Allow scroll if content overflows */
+  user-select: none;
+  /* Kiosk mode feel */
+}
+
+/* Scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
