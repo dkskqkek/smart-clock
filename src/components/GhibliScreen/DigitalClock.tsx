@@ -24,8 +24,8 @@ const Digit = ({ value }: { value: string }) => (
 );
 
 export const DigitalClock: React.FC<DigitalClockProps> = ({ time }) => {
-    const hours = time.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit' }).split('');
-    const minutes = time.toLocaleTimeString('en-US', { minute: '2-digit' }).split('');
+    const hours = time.getHours().toString().padStart(2, '0').split('');
+    const minutes = time.getMinutes().toString().padStart(2, '0').split('');
 
     return (
         <motion.div
