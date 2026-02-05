@@ -25,7 +25,8 @@
 .widgetRow {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.08);
+  /* 0.08 -> 0.04 (50% more transparent) */
+  background: rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(45px);
   -webkit-backdrop-filter: blur(45px);
   border-radius: 4.5vmin;
@@ -38,7 +39,8 @@
 }
 
 .colTitle {
-  font-size: 3.8vmin;
+  /* Increased from 3.8vmin */
+  font-size: 4.5vmin;
   color: #ffffff;
   margin-bottom: 2.3vmin;
   font-weight: 600;

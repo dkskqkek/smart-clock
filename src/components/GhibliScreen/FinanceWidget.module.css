@@ -33,21 +33,24 @@
 }
 
 .name {
-    font-size: 2.7vmin;
+    /* 2.7 -> 3.5 */
+    font-size: 3.5vmin;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .change {
-    font-size: 2.7vmin;
+    /* 2.7 -> 3.5 */
+    font-size: 3.5vmin;
     font-weight: 600;
     text-align: right;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .price {
-    font-size: 3.6vmin;
+    /* 3.6 -> 4.8 */
+    font-size: 4.8vmin;
     font-weight: 700;
     color: #ffffff;
     margin-top: 0.5vmin;
@@ -64,7 +67,8 @@
 
 .loading {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 2.7vmin;
+    font-size: 3.5vmin;
+    /* Increased */
     text-align: center;
     grid-column: span 2;
     align-self: center;
