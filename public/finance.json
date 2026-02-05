@@ -9,22 +9,22 @@
   {
     "name": "Gold",
     "symbol": "GC=F",
-    "price": 4883.7998046875,
-    "change": -0.09614800680167741,
+    "price": 4863.10009765625,
+    "change": -0.5195847876393577,
     "currency": "USD"
   },
   {
     "name": "Bitcoin",
     "symbol": "BTC-USD",
-    "price": 66056.703125,
-    "change": -9.564606710026556,
+    "price": 65099.53515625,
+    "change": -10.87502423926154,
     "currency": "USD"
   },
   {
     "name": "NASDAQ",
     "symbol": "^IXIC",
-    "price": 22679.228515625,
-    "change": -0.9838708431894482,
+    "price": 22586.603515625,
+    "change": -1.3882659467014968,
     "currency": "USD"
   }
 ]
