@@ -1,26 +1,9 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { GhibliScreen } from './components/GhibliScreen/GhibliScreen';
-import { requestWakeLock } from './services/wakeLock';
+import { useWakeLock } from './hooks/useWakeLock';
 
 function App() {
-  useEffect(() => {
-    // Request Wake Lock on mount
-    const initWakeLock = async () => {
-      await requestWakeLock();
-    };
-
-    initWakeLock();
-
-    // Re-request on visibility change
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        initWakeLock();
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
-  }, []);
+  useWakeLock();
 
   return (
     <GhibliScreen />
