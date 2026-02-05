@@ -31,6 +31,10 @@
   border-radius: 4.5vmin;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 9px 45px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.3vmin;
 }
 
 .colTitle {
@@ -38,5 +42,30 @@
   color: #ffffff;
   margin-bottom: 2.3vmin;
   font-weight: 600;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  padding-left: 1.5vmin;
+}
+
+.widgetCol {
+  flex: 1;
+  height: 100%;
+  padding: 0 1.5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.widgetColWide {
+  flex: 2;
+  height: 100%;
+  padding: 0 1.5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.15);
 }

@@ -11,20 +11,15 @@
     cursor: pointer;
 }
 
-
 .title {
     font-size: 3.3vmin;
-    /* 1.8 -> 2.2 */
     font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
-    /* Brighter */
     margin-bottom: 0.8vmin;
     align-self: flex-start;
     padding-left: 1.5vmin;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    /* Shadow for visibility */
 }
-
 
 .content {
     display: flex;
@@ -33,7 +28,50 @@
     margin-bottom: 1.5vmin;
 }
 
-
 .iconArea {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 9vmin;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.infoArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temp {
+    font-size: 7.5vmin;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+    font-size: 2.7vmin;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.5vmin;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.details {
+    display: flex;
+    gap: 1.5vmin;
+    margin-top: 0.5vmin;
+}
+
+.detailPill {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.6vmin 1.2vmin;
+    border-radius: 2vmin;
+    font-size: 2.1vmin;
+    color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 0.6vmin;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
