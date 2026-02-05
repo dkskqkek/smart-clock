@@ -25,13 +25,15 @@
 .widgetRow {
   width: 100%;
   height: 100%;
-  /* 0.08 -> 0.04 (50% more transparent) */
-  background: rgba(0, 0, 0, 0.04);
+  /* 98% transparent = 0.02 opacity */
+  background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(45px);
   -webkit-backdrop-filter: blur(45px);
   border-radius: 4.5vmin;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 9px 45px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Reduced border opacity too */
+  box-shadow: 0 9px 45px rgba(0, 0, 0, 0.2);
+  /* Softer shadow */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,12 +41,12 @@
 }
 
 .colTitle {
-  /* Increased from 3.8vmin */
   font-size: 4.5vmin;
-  color: #ffffff;
+  /* Soft Gold for Section Titles */
+  color: #FFE4B5;
   margin-bottom: 2.3vmin;
   font-weight: 600;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
   padding-left: 1.5vmin;
 }
 
@@ -69,5 +71,5 @@
 .divider {
   width: 1px;
   height: 70%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
 }

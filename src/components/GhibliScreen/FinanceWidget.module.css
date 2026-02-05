@@ -8,10 +8,10 @@
 }
 
 .pill {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 1.5vmin;
     padding: 1.5vmin 2.3vmin;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .pill:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .header {
@@ -33,15 +33,14 @@
 }
 
 .name {
-    /* 2.7 -> 3.5 */
     font-size: 3.5vmin;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+    /* Soft Green for asset names */
+    color: #C1E1C1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .change {
-    /* 2.7 -> 3.5 */
     font-size: 3.5vmin;
     font-weight: 600;
     text-align: right;
@@ -49,26 +48,27 @@
 }
 
 .price {
-    /* 3.6 -> 4.8 */
     font-size: 4.8vmin;
     font-weight: 700;
+    /* Bright White for prices */
     color: #ffffff;
     margin-top: 0.5vmin;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .positive {
-    color: #ff6b6b;
+    /* Soft Red/Pink */
+    color: #FF8A80;
 }
 
 .negative {
-    color: #4dabf7;
+    /* Soft Blue */
+    color: #82B1FF;
 }
 
 .loading {
     color: rgba(255, 255, 255, 0.7);
     font-size: 3.5vmin;
-    /* Increased */
     text-align: center;
     grid-column: span 2;
     align-self: center;

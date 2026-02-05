@@ -12,10 +12,10 @@
 }
 
 .title {
-    /* 3.3 -> 4.2 */
     font-size: 4.2vmin;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.95);
+    /* Soft cyan/white mix for weather title */
+    color: #E0F7FA;
     margin-bottom: 0.8vmin;
     align-self: flex-start;
     padding-left: 1.5vmin;
@@ -33,9 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 9 -> 12 */
     font-size: 12vmin;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    /* Golden glow for icons */
+    color: #FFECB3;
 }
 
 .infoArea {
@@ -45,7 +46,6 @@
 }
 
 .temp {
-    /* 7.5 -> 10 */
     font-size: 10vmin;
     font-weight: 700;
     color: #ffffff;
@@ -54,7 +54,6 @@
 }
 
 .desc {
-    /* 2.7 -> 3.5 */
     font-size: 3.5vmin;
     color: rgba(255, 255, 255, 0.9);
     margin-top: 0.5vmin;
@@ -68,15 +67,16 @@
 }
 
 .detailPill {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.2);
     padding: 0.6vmin 1.2vmin;
     border-radius: 2vmin;
-    /* 2.1 -> 2.8 */
     font-size: 2.8vmin;
-    color: rgba(255, 255, 255, 0.9);
+    /* Warm white for details */
+    color: #FFF8E1;
     backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     gap: 0.6vmin;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
