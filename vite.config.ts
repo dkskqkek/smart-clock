@@ -16,7 +16,7 @@ export default defineConfig({
         description: 'Premium Ghibli Theme Digital Clock',
         theme_color: '#000000',
         background_color: '#000000',
-        display: 'standalone',
+        display: 'fullscreen',
         orientation: 'landscape',
         icons: [
           {

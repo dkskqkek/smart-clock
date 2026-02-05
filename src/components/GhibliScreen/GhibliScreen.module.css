@@ -1,6 +1,6 @@
 .screen {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: url('/smart-clock/ghibli_bg.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
