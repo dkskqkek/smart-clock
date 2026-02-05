@@ -9,15 +9,15 @@
   {
     "name": "Gold",
     "symbol": "GC=F",
-    "price": 4798.10009765625,
-    "change": -1.8492360098956735,
+    "price": 4765.7998046875,
+    "change": -2.509976379513143,
     "currency": "USD"
   },
   {
     "name": "Bitcoin",
     "symbol": "BTC-USD",
-    "price": 63975.9296875,
-    "change": -12.413304196662473,
+    "price": 63379.203125,
+    "change": -13.230256887506616,
     "currency": "USD"
   },
   {
