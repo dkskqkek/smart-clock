@@ -2,22 +2,22 @@
   {
     "name": "KOSPI",
     "symbol": "^KS11",
-    "price": 5371.10009765625,
-    "change": 1.5699478384640566,
+    "price": 5182.7900390625,
+    "change": -3.308322840683775,
     "currency": "KRW"
   },
   {
     "name": "Gold",
     "symbol": "GC=F",
-    "price": 5038.89990234375,
-    "change": -1.2019193486775277,
+    "price": 4855.2001953125,
+    "change": -4.803733002974569,
     "currency": "USD"
   },
   {
     "name": "Bitcoin",
     "symbol": "BTC-USD",
-    "price": 73259.8203125,
-    "change": -3.1717532371314223,
+    "price": 71510.140625,
+    "change": -2.098539804423787,
     "currency": "USD"
   },
   {
