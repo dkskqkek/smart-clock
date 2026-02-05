@@ -7,6 +7,21 @@ import { useWeather } from '../../hooks/useWeather';
 import styles from './GhibliScreen.module.css';
 
 export const GhibliScreen: React.FC = () => {
+
+    const getWeatherDesc = (code: number) => {
+        switch (code) {
+            case 0: return '맑음';
+            case 1: case 2: case 3: return '구름 많음';
+            case 45: case 48: return '안개/박무';
+            case 51: case 53: case 55: return '이슬비';
+            case 61: case 63: case 65: return '비';
+            case 71: case 73: case 75: return '눈';
+            case 80: case 81: case 82: return '소나기';
+            case 95: case 96: case 99: return '뇌우';
+            default: return '흐림';
+        }
+    };
+
     const [time, setTime] = useState(new Date());
     const { weather } = useWeather();
 
@@ -34,7 +49,7 @@ export const GhibliScreen: React.FC = () => {
     if (weather && weather.daily.time.length > 1) {
         tmrTemp = (weather.daily.temperature_2m_max[1] + weather.daily.temperature_2m_min[1]) / 2;
         tmrCode = weather.daily.weather_code[1];
-        tmrDesc = '예보';
+        tmrDesc = getWeatherDesc(tmrCode);
         tmrMax = weather.daily.temperature_2m_max[1];
         tmrMin = weather.daily.temperature_2m_min[1];
     }
