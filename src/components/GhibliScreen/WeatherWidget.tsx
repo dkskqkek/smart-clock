@@ -14,7 +14,7 @@ interface WeatherWidgetProps {
 }
 
 const getWeatherIcon = (code: number) => {
-    const props = { size: "5vmin", color: "#ffffff", strokeWidth: 2 };
+    const props = { size: "10vmin", color: "#ffffff", strokeWidth: 2 };
 
     // Animation variant for floating effect
     const floatAnim = {
