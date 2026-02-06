@@ -9,6 +9,8 @@
     height: 100%;
     position: relative;
     cursor: pointer;
+    /* Enable Container Queries for semantic scaling */
+    container-type: inline-size;
 }
 
 .title {
@@ -85,14 +87,40 @@
     display: flex;
     gap: 2vmin;
     align-items: center;
+    white-space: nowrap;
+    /* Prevent line break */
 }
 
+/* Fallback for older browsers */
 .high,
 .low {
     font-size: 7.5vmin;
-    /* Increased to approx 2.5x of typical size */
     font-weight: 700;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive scaling using Container Queries and Viewport Units */
+@supports (container-type: inline-size) {
+
+    .high,
+    .low {
+        /* Use 12cqw (12% of container width) to fit ~8 chars spread across 100% width.
+           "H:25° L:18°" is about 10 chars + gap. 
+           10 chars * 12% = 120% ? Too big.
+           Let's aim for 8-9cqw to be safe.
+        */
+        font-size: min(7.5vmin, 9cqw);
+    }
+}
+
+/* Fallback manual media query logic if CQ not supported well */
+@media (max-width: 1200px) {
+
+    .high,
+    .low {
+        /* On smaller screens, cap it by VW logic if CQ fails */
+        font-size: min(7.5vmin, 4.5vw);
+    }
 }
 
 .high {
