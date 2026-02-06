@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 
 export const Finance: React.FC = () => {
-    const data = useFinance();
+    const { items: data } = useFinance();
 
     return (
         <div className={styles.grid}>

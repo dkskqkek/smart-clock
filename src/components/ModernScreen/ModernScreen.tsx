@@ -35,7 +35,7 @@ const FinanceCard = ({ item }: { item: FinanceItem }) => {
 
 export const ModernScreen: React.FC = () => {
     const { weather } = useWeather();
-    const financeData = useFinance();
+    const { items: financeData } = useFinance();
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
