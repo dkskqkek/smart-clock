@@ -2,7 +2,7 @@ name: Update Finance Data
 
 on:
   schedule:
-    - cron: '30 * * * *' # Run every hour at minute 30
+    - cron: "*/30 * * * *" # Run every 30 minutes
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -18,11 +18,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
-          pip install yfinance
+          pip install finance-datareader
 
       - name: Run Finance Fetcher
         run: |
@@ -34,5 +34,5 @@ jobs:
           git config --global user.email "bot@github.com"
           git add public/finance.json
           # Commit only if changes exist
-          git diff --quiet && git diff --staged --quiet || git commit -m "📈 Auto-update finance data"
+          git diff --quiet && git diff --staged --quiet || git commit -m "📈 Auto-update finance data $(date +'%Y-%m-%d %H:%M')"
           git push

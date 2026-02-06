@@ -7,11 +7,23 @@ export interface FinanceItem {
     price: number;
     change: number;
     currency: string;
+    status?: string;
 }
 
+export interface FinanceMeta {
+    updated_at: string;
+    status: string;
+    source: string;
+}
 
-export const useFinance = () => {
-    const [data, setData] = useState<FinanceItem[]>([]);
+export interface UseFinanceReturn {
+    items: FinanceItem[];
+    meta: FinanceMeta | null;
+    isStale: boolean;
+}
+
+export const useFinance = (): UseFinanceReturn => {
+    const [data, setData] = useState<UseFinanceReturn>({ items: [], meta: null, isStale: false });
 
     useEffect(() => {
         const getFinanceData = async () => {
@@ -21,25 +33,49 @@ export const useFinance = () => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 const jsonData = await response.json();
 
-                // Validate/Process
-                // Python stores 'change' as percent directly
-                const processed = jsonData.map((item: any) => ({
+                // Check structure: is it new { meta, data } or old array?
+                let items: FinanceItem[] = [];
+                let meta: FinanceMeta | null = null;
+
+                if (Array.isArray(jsonData)) {
+                    // Old format fallback
+                    items = jsonData;
+                } else if (jsonData.data && Array.isArray(jsonData.data)) {
+                    // New format
+                    items = jsonData.data;
+                    meta = jsonData.meta;
+                }
+
+                // Process items (ensure types)
+                const processed = items.map((item: any) => ({
                     ...item,
                     name: item.name,
                     price: item.price,
-                    change: item.change, // already in %
+                    change: item.change,
                     currency: item.currency
                 }));
 
-                setData(processed);
+                // Check staleness if meta exists
+                let isStale = false;
+                if (meta && meta.updated_at) {
+                    const lastUpdate = new Date(meta.updated_at);
+                    const now = new Date();
+                    const diffMs = now.getTime() - lastUpdate.getTime();
+                    // Consider stale if older than 1 hour (3600 * 1000 ms)
+                    if (diffMs > 60 * 60 * 1000) {
+                        isStale = true;
+                    }
+                }
+
+                setData({ items: processed, meta, isStale });
             } catch (error) {
-                console.warn("Failed to load finance.json, falling back to mock unavailable or keeping old data", error);
-                // Optional: Fallback logic or just nothing
+                console.warn("Failed to load finance.json", error);
+                // Keep existing data or could set error state
             }
         };
 
         getFinanceData();
-        const interval = setInterval(getFinanceData, 10 * 1000); // Check every 10 sec (file might update)
+        const interval = setInterval(getFinanceData, 30 * 1000); // Check every 30 sec
 
         return () => clearInterval(interval);
     }, []);

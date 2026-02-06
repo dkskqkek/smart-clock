@@ -25,16 +25,52 @@ const TickerPill = ({ item }: { item: FinanceItem }) => {
 };
 
 export const FinanceWidget: React.FC = () => {
-    const financeData = useFinance();
+    // Destructure new return type
+    const { items: financeData, isStale, meta } = useFinance();
     const targets = ['KOSPI', 'Gold', 'Bitcoin', 'NASDAQ'];
 
     return (
-        <div className={styles.grid}>
-            {targets.map(sym => {
-                const item = financeData.find(f => f.name === sym || f.symbol === sym);
-                if (!item) return null;
-                return <TickerPill key={sym} item={item} />;
-            })}
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+            <div
+                className={styles.grid}
+                style={{
+                    opacity: isStale ? 0.5 : 1,
+                    transition: 'opacity 0.3s'
+                }}
+            >
+                {targets.map(sym => {
+                    const item = financeData.find(f => f.name === sym || f.symbol === sym);
+                    if (!item) return null;
+                    return <TickerPill key={sym} item={item} />;
+                })}
+            </div>
+
+            {/* Stale Indicator */}
+            {isStale && (
+                <div style={{
+                    position: 'absolute',
+                    bottom: '1vmin',
+                    right: '1vmin',
+                    color: '#FF8A80',
+                    fontSize: '2vmin',
+                    fontWeight: 600,
+                    textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+                    zIndex: 10,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5vmin',
+                    background: 'rgba(0,0,0,0.6)',
+                    padding: '0.5vmin 1vmin',
+                    borderRadius: '0.8vmin'
+                }}>
+                    <span>⚠️ Data Stale</span>
+                    {meta?.updated_at && (
+                        <span style={{ fontSize: '1.5vmin', opacity: 0.8 }}>
+                            ({new Date(meta.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})
+                        </span>
+                    )}
+                </div>
+            )}
         </div>
     );
 };
