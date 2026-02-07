@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-02-08T07:52:33.686580+09:00",
+    "updated_at": "2026-02-08T08:22:38.778986+09:00",
     "status": "success",
     "source": "FinanceDataReader"
   },
@@ -24,8 +24,8 @@
     {
       "name": "Bitcoin",
       "symbol": "BTC-USD",
-      "price": 69331.6875,
-      "change": -1.7343864361887655,
+      "price": 68910.265625,
+      "change": -2.3316786788748645,
       "currency": "USD",
       "status": "success"
     },
