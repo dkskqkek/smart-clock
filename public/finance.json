@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-02-07T10:21:05.083522+09:00",
+    "updated_at": "2026-02-07T12:37:52.809155+09:00",
     "status": "success",
     "source": "FinanceDataReader"
   },
@@ -24,7 +24,7 @@
     {
       "name": "Bitcoin",
       "symbol": "BTC-USD",
-      "price": 69973.7265625,
+      "price": 70708.578125,
       "change": 0.0,
       "currency": "USD",
       "status": "success"
@@ -32,8 +32,8 @@
     {
       "name": "NASDAQ",
       "symbol": "IXIC",
-      "price": 23031.212890625,
-      "change": 2.176620267153474,
+      "price": 23031.2109375,
+      "change": 2.1766116022293813,
       "currency": "USD",
       "status": "success"
     }
