@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-02-09T08:52:22.462203+09:00",
+    "updated_at": "2026-02-09T10:27:44.300173+09:00",
     "status": "success",
     "source": "FinanceDataReader"
   },
@@ -8,24 +8,24 @@
     {
       "name": "KOSPI",
       "symbol": "^KS11",
-      "price": 5089.14013671875,
-      "change": -1.4414385790021003,
+      "price": 5305.740234375,
+      "change": 4.256123664063692,
       "currency": "KRW",
       "status": "success"
     },
     {
       "name": "Gold",
       "symbol": "GC=F",
-      "price": 5061.0,
-      "change": 2.217640175233712,
+      "price": 5044.0,
+      "change": 1.8742890819756652,
       "currency": "USD",
       "status": "success"
     },
     {
       "name": "Bitcoin",
       "symbol": "BTC-USD",
-      "price": 70611.53125,
-      "change": 1.9190599285618597,
+      "price": 70818.0859375,
+      "change": 0.0,
       "currency": "USD",
       "status": "success"
     },
