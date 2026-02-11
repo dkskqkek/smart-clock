@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-02-11T16:33:59.993098+09:00",
+    "updated_at": "2026-02-11T17:40:12.908200+09:00",
     "status": "success",
     "source": "FinanceDataReader"
   },
@@ -16,16 +16,16 @@
     {
       "name": "Gold",
       "symbol": "GC=F",
-      "price": 5080.5,
-      "change": 1.532839008480079,
+      "price": 5075.0,
+      "change": 1.4229225407019783,
       "currency": "USD",
       "status": "success"
     },
     {
       "name": "Bitcoin",
       "symbol": "BTC-USD",
-      "price": 66940.8828125,
-      "change": -2.693663949199756,
+      "price": 66936.8515625,
+      "change": -2.699523838563682,
       "currency": "USD",
       "status": "success"
     },
