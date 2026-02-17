@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-02-17T23:02:47.176576+09:00",
+    "updated_at": "2026-02-18T00:11:47.009775+09:00",
     "status": "success",
     "source": "FinanceDataReader"
   },
@@ -16,24 +16,24 @@
     {
       "name": "Gold",
       "symbol": "GC=F",
-      "price": 4930.2998046875,
-      "change": -1.8259696398347272,
+      "price": 4878.0,
+      "change": -2.867383512544803,
       "currency": "USD",
       "status": "success"
     },
     {
       "name": "Bitcoin",
       "symbol": "BTC-USD",
-      "price": 68094.296875,
-      "change": -1.087776063434047,
+      "price": 67054.7109375,
+      "change": -2.5978549066015546,
       "currency": "USD",
       "status": "success"
     },
     {
       "name": "NASDAQ",
       "symbol": "IXIC",
-      "price": 22546.669921875,
-      "change": -0.22339307336266215,
+      "price": 22300.27734375,
+      "change": -1.0928113951140408,
       "currency": "USD",
       "status": "success"
     }
